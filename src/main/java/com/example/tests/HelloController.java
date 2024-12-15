@@ -14,6 +14,13 @@ public class HelloController {
 
     @FXML
     private ImageView spriteImageView;
+    @FXML
+    private ImageView fight_cave;
+    @FXML
+    private ImageView potions_house;
+    @FXML
+    private ImageView shop_castle;
+
 
     @FXML
     private GridPane gridPane;
@@ -26,8 +33,29 @@ public class HelloController {
 
     @FXML
     public void initialize() {
-        String imagePath = getClass().getResource("/Pics/DarkCastle_19_16x16.png").toExternalForm();
+        String imagePath = getClass().getResource("/Pics/DarkTile.png").toExternalForm();
         Image image = new Image(imagePath);
+
+        //fighting cave
+        String imagePathFightCave = getClass().getResource("/Pics/GoldMine.png").toExternalForm();
+        Image imageFightCave = new Image(imagePathFightCave);
+        fight_cave.setImage(imageFightCave);
+        fight_cave.setX(1700);
+
+        //Potions
+        String imagePathPotions = getClass().getResource("/Pics/House.png").toExternalForm();
+        Image imagePotions = new Image(imagePathPotions);
+        potions_house.setImage(imagePotions);
+        potions_house.setX(500);
+        potions_house.setY(800);
+
+        //Shop
+        String imagePathShop = getClass().getResource("/Pics/Castle.png").toExternalForm();
+        Image imageShop = new Image(imagePathShop);
+        shop_castle.setImage(imageShop);
+        shop_castle.setX(1600);
+        shop_castle.setY(750);
+
 
         gridPane.widthProperty().addListener((observable, oldValue, newValue) -> fillGridPane(image));
         gridPane.heightProperty().addListener((observable, oldValue, newValue) -> fillGridPane(image));
@@ -62,7 +90,7 @@ public class HelloController {
     public void setGridSize(int newRows, int newColumns) {
         this.rows = newRows;
         this.columns = newColumns;
-        String imagePath = getClass().getResource("/Pics/DarkCastle_19_16x16.png").toExternalForm();
+        String imagePath = getClass().getResource("/Pics/DarkTile.png").toExternalForm();
         Image image = new Image(imagePath);
         fillGridPane(image);
     }

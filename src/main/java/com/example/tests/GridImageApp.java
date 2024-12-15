@@ -13,7 +13,7 @@ public class GridImageApp extends Application {
     public void start(Stage primaryStage) {
         final int rows = 50;
         final int columns = 50;
-        String imagePath = getClass().getResource("/Pics/DarkCastle_19_16x16.png").toExternalForm();
+        String imagePath = getClass().getResource("/Pics/DarkTile.png").toExternalForm();
         Image image = new Image(imagePath);
 
         GridPane gridPane = new GridPane();

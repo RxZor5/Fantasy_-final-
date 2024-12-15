@@ -2,10 +2,22 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.tests.HelloController">
-    <GridPane fx:id="gridPane" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-        <ImageView fx:id="spriteImageView"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.example.tests.HelloController">
+    <GridPane fx:id="gridPane" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+      <columnConstraints>
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+      </rowConstraints>
     </GridPane>
+     <ImageView fx:id="spriteImageView" fitHeight="100.0" fitWidth="90.0"/>
+    <ImageView fx:id="fight_cave" fitHeight="180.0" fitWidth="200.0"/>
+    <ImageView fx:id="potions_house" fitHeight="300.0" fitWidth="200.0"/>
+    <ImageView fx:id="shop_castle" fitHeight="300.0" fitWidth="280.0"/>
+
 </AnchorPane>
